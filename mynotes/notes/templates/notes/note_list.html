@@ -1,0 +1,12 @@
+{% extends "notes/base.html" %}
+
+{% block title %}Daftar Catatan{% endblock %}
+
+{% block content %}
+    <a href="{% url 'note_create' %}">Tambah Catatan Baru</a>
+    <ul>
+    {% for note in notes %}
+        <li>{{ note.title }} - <a href="{% url 'note_update' note.pk %}">Edit</a> | <a href="{% url 'note_delete' note.pk %}">Hapus</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

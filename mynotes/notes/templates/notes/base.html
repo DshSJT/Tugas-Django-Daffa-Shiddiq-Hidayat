@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Notes{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'notes/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mau Nyatat Apa Hari Ini?</h1>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
